@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Bautizo Henri Louis</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Cormorant+Garamond:wght@300;500&display=swap" rel="stylesheet">
+
+<style>
+body {
+  font-family: 'Cormorant Garamond', serif;
+  margin: 0;
+  background: #eaf3fb url('https://www.transparenttextures.com/patterns/french-stucco.png');
+  color:#0D2943;
+}
+
+/* INTRO */
+#intro {
+  position: fixed;
+  top:0;left:0;
+  width:100%;height:100%;
+  background:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+  animation: fadeOut 1s ease-in 0.5s forwards;
+}
+#intro h1 {
+  font-family:'Playfair Display', serif;
+  color:#0D2943;
+  letter-spacing:4px;
+}
+@keyframes fadeOut {
+  to {opacity:0.5; visibility:hidden;}
+}
+
+/* CONTAINER */
+.container {
+  max-width:800px;
+  margin:auto;
+  padding:20px;
+}
+
+h1,h2 {
+  font-family:'Playfair Display', serif;
+  text-align:center;
+}
+
+.card {
+  background: #F2EDDE;
+  backdrop-filter: blur(6px);
+  padding:25px;
+  margin:30px 0;
+  border-radius:20px;
+  box-shadow:0 10px 40px rgba(0,0,0,0.08);
+  opacity:0.3;
+  transform:translateY(20px);
+  transition:0.8s;
+}
+.card.active {
+  opacity:1;
+  transform:translateY(0);
+}
+
+.photo {
+  height:260px;
+  background:#eee;
+  border-radius:20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* TIMELINE */
+.timeline {
+  border-left:2px solid #a8cfff;
+  padding-left:20px;
+}
+.timeline p {
+  margin:15px 0;
+}
+
+iframe {width:100%;height:250px;border:none;border-radius:12px;}
+
+/* BUTTON */
+button {
+  background:#a8cfff;
+  color:white;
+  border:none;
+  padding:12px;
+  border-radius:10px;
+  cursor:pointer;
+  margin-top:10px;
+  position:absolute;
+  top:0;
+  right:0;
+}
+
+/* FORM */
+input, select, textarea {
+  width:100%;
+  margin:8px 0;
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #ddd;
+}
+
+.success {
+  display:none;
+  text-align:center;
+  color:#0D2943;
+  font-size:20px;
+}
+
+/* FLOATING PARTICLES */
+.particle {
+  position:fixed;
+  width:6px;height:6px;
+  background:#a8cfff;
+  border-radius:50%;
+  opacity:0.3;
+  animation: float 10s infinite linear;
+}
+@keyframes float {
+  from {transform:translateY(100vh);}
+  to {transform:translateY(-10vh);}
+}
+</style>
+</head>
+
+<body>
+
+<div id="intro"><h1>Henri Louis</h1></div>
+
+<!-- Música Los Chicos del Coro -->
+<audio autoplay loop>
+  <source src="https://cdn.pixabay.com/download/audio/2022/02/23/audio_d1718f5c2d.mp3" type="audio/mp3">
+</audio>
+
+<div class="container">
+
+<h1>Bautizo de Henri Louis</h1>
+<h2 style="text-align:center">7 de junio de 2026</h2>
+
+<button onclick="traducir()">🇫🇷 Traduire en français</button>
+
+<div class="card">
+<p style="text-align:center; font-size:20px;">
+Nos complace invitarle al bautizo de nuestro querido Henri Louis.<br><br>
+Será un día muy especial que deseamos compartir con ustedes en familia.
+</p>
+</div>
+
+<div class="card photo">Foto del niño</div>
+
+<div class="card">
+<h2>Programa</h2>
+<h2>7 de Junio 2026</h2>
+<div class="timeline">
+<p><b>11.30</b> Ceremonia: Iglesia del Divino Salvador, Sevilla</p>
+<p><b>13:15</b> Cóctel de bienvenida en la terraza</p>
+<p><b>13:45</b> Almuerzo</p>
+<p><b>16:00</b> Copas en el rooftop</p>
+</div>
+</div>
+
+<div class="card">
+<h2>Ceremonia</h2>
+<p style="text-align:center">Iglesia del Divino Salvador, Sevilla</p>
+<p style="text-align:center">11:30</p>
+<iframe src="https://maps.google.com/maps?q=Iglesia%20del%20Salvador%20Sevilla&output=embed"></iframe>
+</div>
+
+<div class="card">
+<h2>Celebración</h2>
+<p style="text-align:center">Restaurante Maestría</p>
+<p style="text-align:center">13:15</p>
+<iframe src="https://maps.google.com/maps?q=Hotel%20Querencia%20Sevilla&output=embed"></iframe>
+</div>
+
+
+<div class="card">
+<p style="text-align:center">
+Código de vestimenta: Formal<br><br>
+👔 Traje de chaqueta &nbsp;&nbsp;&nbsp; 👗 Vestido de cóctel
+</p>
+</div>
+
+<div class="card">
+<h2>Confirmación de asistencia</h2>
+
+<!-- FORMULARIO GOOGLE (reemplaza con tu link) -->
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfEjemplo/viewform?embedded=true">
+Cargando…
+</iframe>
+
+</div>
+
+<div class="card">
+<p style="text-align:center; font-size:22px;">
+Con mucho cariño,<br><br>
+Os esperamos 💙
+</p>
+</div>
+
+</div>
+
+<script>
+
+// Scroll reveal
+const cards = document.querySelectorAll('.card');
+window.addEventListener('scroll', () => {
+  cards.forEach(c => {
+    if(c.getBoundingClientRect().top < window.innerHeight - 100){
+      c.classList.add('active');
+    }
+  });
+});
+
+// Particles
+for(let i=0;i<25;i++){
+  let p=document.createElement('div');
+  p.className='particle';
+  p.style.left=Math.random()*100+'%';
+  p.style.animationDuration=(5+Math.random()*10)+'s';
+  document.body.appendChild(p);
+}
+
+// Traducción simple
+function traducir(){
+  document.body.innerHTML = document.body.innerHTML
+  .replace("Bautizo de Henri Louis","Bapteme d'Henri Louis Rallet")
+  .replace("7 de junio de 2026","7 Juin 2026")
+  .replace("Nos complace invitarle al bautizo de nuestro querido Henri Louis.","Nous avons le plaisir de vous inviter au bapteme de notre petit Henri.")
+  .replace("Será un día muy especial que deseamos compartir con ustedes en familia.","C'est une journée unique que nous souhaitons partager en famille avec vous.")
+  .replace("Programa","Programme")
+  .replace("7 de Junio 2026","7 Juin 2026")
+  .replace("Ceremonia","Cérémonie")
+  .replace("Ceremonia","Cérémonie")
+  .replace("Iglesia del Divino Salvador, Sevilla","Eglise du Divino Salvador, Seville")
+  .replace("Cóctel de bienvenida en la terraza","Apéritif de Bienvenue sur la terrasse.")
+  .replace("Almuerzo","Déjeuner")
+  .replace("Celebración","Célébration")
+  .replace("Copas en el rooftop", "Cocktails sur le rooftop")
+  .replace("Código de vestimenta","Code vestimentaire")
+  .replace("Formal","Formel")
+  .replace("Traje de chaqueta","Costume cravate")
+  .replace("Vestido de cóctel","Robe cocktail")
+  .replace("Confirmación de asistencia","Confirmer votre présence")
+  .replace("Os esperamos","Nous vous attendons");
+}
+
+</script>
+
+</body>
+</html>
